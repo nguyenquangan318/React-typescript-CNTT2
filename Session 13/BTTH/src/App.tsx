@@ -33,13 +33,34 @@ export default class App extends Component<{}, StateType> {
     }
     const addTodo = () => {
       let newTodo: Todo = {
-        id: todos.length,
+        id: todos[todos.length - 1].id + 1,
         content: this.state.inputTodo,
         isDone: false
       }
       this.setState({
         todos: [...todos, newTodo]
       })
+    }
+    //Xay dung ham xoa
+    const deleteTodo = (id: number) => {
+      this.setState({
+        todos: todos.filter((todo) => todo.id !== id)
+      })
+    }
+    //Truyen ham xoa xuong component con
+    //Gan su kien onClick cho nut xoa
+
+    //Xay dung ham danh dau hoan thanh
+    const markAsDone = (id: number) => {
+      let todo = todos.find((todo) => todo.id === id)
+      if (todo) {
+        if (todo.isDone) {
+          todo.isDone = false
+        } else {
+          todo.isDone = true
+        }
+      }
+      this.setState({ todos: todos })
     }
 
     return (
@@ -74,7 +95,7 @@ export default class App extends Component<{}, StateType> {
           : <div className="todo-list">
             {/* Todo List */}
             {todos.map((todo) => {
-              return <TodoItem key={todo.id} content={todo.content} isDone={todo.isDone}></TodoItem>
+              return <TodoItem key={todo.id} content={todo.content} isDone={todo.isDone} handleDelete={deleteTodo} id={todo.id} handleToggle={markAsDone}></TodoItem>
             })}
           </div>}
         {/* Footer */}
