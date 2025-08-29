@@ -1,5 +1,12 @@
+interface PropsType {
+    content: string;
+    isDone: boolean;
+    id: number;
+    handleToggle: (id: number) => void
+    handleDelete: (id: number) => void
+}
 
-function TodoItem() {
+function TodoItem({ content, isDone, id, handleToggle, handleDelete }: PropsType) {
     return (
         <li
             className="list-group-item d-flex
@@ -11,12 +18,9 @@ function TodoItem() {
                 <input
                     className="form-check-input me-2"
                     type="checkbox"
-                    onClick={() => {
-
-                    }}
+                    onChange={() => { handleToggle(id) }}
                 />
-                {/* {isDone ? <s>{content}</s> : <span>{content}</span>} */}
-                <s>Công việc</s>
+                {isDone ? <s>{content}</s> : <span>{content}</span>}
             </div>
             <div>
                 <a href="#!" className="text-info" title="Sửa công việc">
@@ -28,7 +32,7 @@ function TodoItem() {
                     href="#!"
                     className="text-danger"
                     title="Xóa công việc"
-                // onClick={() => { handleDelete(id) }}
+                    onClick={() => { handleDelete(id) }}
                 >
                     <i
                         className="fas fa-trash-alt"
