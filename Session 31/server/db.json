@@ -1,0 +1,40 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "student_name": "Binh",
+      "email": "binh@gmail.com",
+      "address": "Ha Noi",
+      "phone": "0123456789",
+      "status": true,
+      "created_at": "17/9/2025"
+    },
+    {
+      "id": "2",
+      "student_name": "An",
+      "email": "an@gmail.com",
+      "address": "Ha Noi",
+      "phone": "0123456789",
+      "status": true,
+      "created_at": "17/9/2025"
+    },
+    {
+      "id": "3",
+      "student_name": "Huy",
+      "email": "huy@gmail.com",
+      "address": "Ha Noi",
+      "phone": "0123456789",
+      "status": true,
+      "created_at": "17/9/2025"
+    },
+    {
+      "id": "6",
+      "student_name": "Thanh",
+      "email": "thanh@gmail.com",
+      "address": "Ha Noi",
+      "phone": "0123456789",
+      "status": true,
+      "created_at": "27/9/2025"
+    }
+  ]
+}

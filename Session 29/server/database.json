@@ -1,0 +1,23 @@
+{
+  "todos": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "content": "Cong viec 2",
+      "isDone": false
+    },
+    {
+      "id": "2",
+      "content": "Cong viec 2",
+      "isDone": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "An"
+    }
+  ]
+}
