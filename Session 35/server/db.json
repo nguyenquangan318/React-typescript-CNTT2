@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "content": "Quét nhà",
+      "isDone": false
+    },
+    {
+      "id": "2",
+      "content": "Rửa bát",
+      "isDone": false
+    },
+    {
+      "id": "3",
+      "content": "Học",
+      "isDone": false
+    }
+  ]
+}
